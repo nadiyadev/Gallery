@@ -1,0 +1,12 @@
+.grid {
+    display: grid;
+    gap: 34px 2px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    max-width: 1200px;
+    width: 100%;
+    background-color: rgb(181, 243, 243);
+    margin: 0 auto;
+}
+
