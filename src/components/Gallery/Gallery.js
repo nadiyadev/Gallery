@@ -2,7 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Grid } from "../Grid/Grid";
 import { ImageCard } from "../ImageCard";
 
-const IMAGES_URL = "https://picsum.photos/v2/list?page=2&limit=10";
+const getRandomSalt = () =>
+  +String(Math.random() * 10000)
+    .split(".")[0]
+    .toString(36);
+
+const IMAGES_URL = "https://picsum.photos/v2/list?page=1&limit=100" + `&meow=${getRandomSalt()}`;
 
 export function Gallery() {
   const [images, setImages] = useState([]);
